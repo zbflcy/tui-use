@@ -1,0 +1,13 @@
+# Tool-specific local config
+.claude/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+
+# Environment
+.env

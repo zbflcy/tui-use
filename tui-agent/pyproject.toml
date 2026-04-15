@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tui-agent"
+version = "0.1.0"
+description = "CLI tool for agents to interact with TUI programs via terminal buffer"
+requires-python = ">=3.10"
+dependencies = [
+    "pyte>=0.8",
+    "pexpect>=4.8",
+    "click>=8.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+
+[project.scripts]
+tui-agent = "tui_agent.cli:main"
