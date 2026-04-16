@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 160" width="480" height="160">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a2332;stop-opacity:1" />
+    </linearGradient>
+    <!-- 绿色辉光 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- 扫描线效果 -->
+    <pattern id="scanlines" x="0" y="0" width="100%" height="3" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="100%" height="1.5" fill="rgba(0,0,0,0.15)"/>
+    </pattern>
+    <!-- 终端文字字体 -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- 主背景圆角矩形 -->
+  <rect x="0" y="0" width="480" height="160" rx="12" ry="12" fill="url(#bgGrad)"/>
+
+  <!-- 终端窗口边框 -->
+  <rect x="8" y="8" width="464" height="144" rx="8" ry="8"
+        fill="none" stroke="#00ff41" stroke-width="1.5" stroke-opacity="0.4"/>
+
+  <!-- 扫描线覆盖层 -->
+  <rect x="0" y="0" width="480" height="160" rx="12" ry="12" fill="url(#scanlines)" opacity="0.4"/>
+
+  <!-- 顶部标题栏 -->
+  <rect x="8" y="8" width="464" height="30" rx="8" ry="8" fill="#0d1a0d"/>
+  <rect x="8" y="28" width="464" height="10" fill="#0d1a0d"/>
+
+  <!-- 标题栏 · 三个控制圆点 -->
+  <circle cx="30" cy="23" r="5.5" fill="#ff5f57"/>
+  <circle cx="48" cy="23" r="5.5" fill="#febc2e"/>
+  <circle cx="66" cy="23" r="5.5" fill="#28c840"/>
+
+  <!-- 标题栏文字 -->
+  <text x="240" y="27" text-anchor="middle"
+        font-family="'Share Tech Mono', 'Courier New', monospace"
+        font-size="11" fill="#4a9e5c" letter-spacing="2">tui-agent — terminal session</text>
+
+  <!-- 左侧：终端屏幕图标 -->
+  <!-- 屏幕外壳 -->
+  <rect x="22" y="52" width="68" height="50" rx="4" ry="4"
+        fill="#0a1a0a" stroke="#00ff41" stroke-width="1.5" stroke-opacity="0.7"/>
+  <!-- 屏幕内显示区 -->
+  <rect x="27" y="57" width="58" height="40" rx="2" ry="2" fill="#001a00"/>
+  <!-- 屏幕底座支架 -->
+  <rect x="48" y="102" width="16" height="5" rx="1" fill="#1a3a1a" stroke="#00ff41" stroke-width="1" stroke-opacity="0.5"/>
+  <rect x="38" y="107" width="36" height="4" rx="2" fill="#1a3a1a" stroke="#00ff41" stroke-width="1" stroke-opacity="0.5"/>
+
+  <!-- 屏幕内容：模拟 tui 界面 -->
+  <text x="30" y="68" font-family="'Share Tech Mono', monospace" font-size="6" fill="#00ff41" filter="url(#glow)">$ tui-agent start</text>
+  <text x="30" y="77" font-family="'Share Tech Mono', monospace" font-size="6" fill="#39d353">&gt; session ready</text>
+  <text x="30" y="86" font-family="'Share Tech Mono', monospace" font-size="6" fill="#00ff41">&gt; capture screen</text>
+  <!-- 光标闪烁 -->
+  <rect x="30" y="90" width="5" height="7" fill="#00ff41" opacity="0.9"/>
+
+  <!-- 连接箭头 -->
+  <line x1="94" y1="77" x2="114" y2="77" stroke="#00ff41" stroke-width="1.5" stroke-opacity="0.6" stroke-dasharray="3,2"/>
+  <polygon points="114,73 122,77 114,81" fill="#00ff41" opacity="0.6"/>
+
+  <!-- 右侧：主文字 TUI-USE -->
+  <!-- 大标题 -->
+  <text x="138" y="88"
+        font-family="'Share Tech Mono', 'Courier New', monospace"
+        font-size="46" font-weight="bold"
+        fill="#00ff41"
+        filter="url(#glow)"
+        letter-spacing="3">TUI</text>
+
+  <!-- 连字符装饰 -->
+  <text x="262" y="88"
+        font-family="'Share Tech Mono', 'Courier New', monospace"
+        font-size="46" font-weight="bold"
+        fill="#39d353" opacity="0.7"
+        filter="url(#glow)">-</text>
+
+  <text x="283" y="88"
+        font-family="'Share Tech Mono', 'Courier New', monospace"
+        font-size="46" font-weight="bold"
+        fill="#00ff41"
+        filter="url(#glow)"
+        letter-spacing="3">USE</text>
+
+  <!-- 副标题 -->
+  <text x="138" y="108"
+        font-family="'Share Tech Mono', 'Courier New', monospace"
+        font-size="11" fill="#4a9e5c" letter-spacing="4">TERMINAL UI AUTOMATION</text>
+
+  <!-- 底部装饰线 + 版本标签 -->
+  <line x1="138" y1="118" x2="455" y2="118" stroke="#00ff41" stroke-width="0.8" stroke-opacity="0.3"/>
+  <text x="138" y="132"
+        font-family="'Share Tech Mono', 'Courier New', monospace"
+        font-size="9" fill="#2d6e3e" letter-spacing="2">start · capture · type · click · wait</text>
+
+  <!-- 右下角装饰：版本 badge -->
+  <rect x="410" y="136" width="45" height="14" rx="3" fill="#00ff41" opacity="0.15" stroke="#00ff41" stroke-width="0.8" stroke-opacity="0.5"/>
+  <text x="433" y="146" text-anchor="middle"
+        font-family="'Share Tech Mono', monospace"
+        font-size="8" fill="#00ff41">v1.0</text>
+
+  <!-- 四角装饰点 -->
+  <rect x="10" y="10" width="4" height="4" fill="#00ff41" opacity="0.5"/>
+  <rect x="466" y="10" width="4" height="4" fill="#00ff41" opacity="0.5"/>
+  <rect x="10" y="146" width="4" height="4" fill="#00ff41" opacity="0.5"/>
+  <rect x="466" y="146" width="4" height="4" fill="#00ff41" opacity="0.5"/>
+</svg>
