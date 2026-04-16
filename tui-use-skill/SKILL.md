@@ -9,7 +9,7 @@ This skill teaches you how to use the `tui-agent` CLI tool to start, interact wi
 
 ## Prerequisites
 
-`tui-agent` must be installed and available in PATH. Install from the sibling `tui-agent/` directory:
+`tui-agent` must be installed and available in PATH, you can clone from [tui-use github](https://github.com/zbflcy/tui-use/tree/main/tui-agent). Install from the sibling `tui-agent/` directory:
 ```bash
 pip install -e tui-agent/
 ```
