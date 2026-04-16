@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="./tui-use/logo.svg" alt="Project Logo" width="200"/>
+</p>
 # tui-use
 
 让 AI Agent 能够操控终端 TUI 程序的工具集。包含一个 CLI 工具 `tui-agent` 和一个配套的 Agent Skill `tui-use`。
