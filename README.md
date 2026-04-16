@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./tui-use/logo.svg" alt="Project Logo" width="600"/>
+  <img src="./logo/logo.svg" alt="Project Logo" width="600"/>
 </p>
 
 # tui-use
